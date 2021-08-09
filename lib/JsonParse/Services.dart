@@ -18,7 +18,7 @@ class Services {
         return List.empty();
       }
     } catch(e){
-      return List.empty();
+      return Future.error(e);
     }
 
   }
