@@ -1,6 +1,10 @@
 import 'package:beta_weddin/JsonParse/User.dart';
 import 'package:http/http.dart' as http;
 
+
+
+
+
 class Services {
   static const String url = "https://jsonplaceholder.typicode.com/users";
 

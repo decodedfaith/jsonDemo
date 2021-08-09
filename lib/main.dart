@@ -1,4 +1,4 @@
-import 'package:beta_weddin/splashScreen.dart';
+import 'package:beta_weddin/SplashScreen/splashScreen.dart';
 import 'package:flutter/material.dart';
 
 void main() {

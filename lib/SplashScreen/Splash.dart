@@ -1,12 +1,16 @@
-import 'package:beta_weddin/JsonParse/JsonParseDemo.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:beta_weddin/JsonParse/UsersList.dart';
 import 'package:flutter/material.dart';
 
-class SplashScreen extends StatelessWidget {
-  const SplashScreen({Key? key}) : super(key: key);
+
+
+
+class Splash extends StatelessWidget {
+  final car;
+  Splash({this.car});
 
   @override
   Widget build(BuildContext context) {
+    print('splash');
     return Scaffold(
       backgroundColor: Color(0xff5E194E),
       body: Padding(
@@ -27,15 +31,22 @@ class SplashScreen extends StatelessWidget {
             Center(
               child: ElevatedButton(
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => JsonParseDemo()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    print(car[0].name);
+                    return UsersList(car: car);
+                  }));
                 },
                 child: Text(
                   'Get Started',
-                  style: TextStyle(color: Color(0xff5E194E), fontSize: 18, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                      color: Color(0xff5E194E),
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold),
                 ),
                 style: ElevatedButton.styleFrom(
                     primary: Color(0xffFFFFFF),
-                    padding: EdgeInsets.symmetric(horizontal: 110, vertical: 19)),
+                    padding:
+                    EdgeInsets.symmetric(horizontal: 110, vertical: 19)),
               ),
             ),
           ],
@@ -44,6 +55,3 @@ class SplashScreen extends StatelessWidget {
     );
   }
 }
-
-
-
