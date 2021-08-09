@@ -5,8 +5,9 @@ import 'User.dart';
 
 
 class UsersList extends StatelessWidget {
-  final List<User>? car;
-  UsersList({this.car});
+
+  UsersList(this.car);
+  final List<User> car;
 
 
   @override
@@ -18,10 +19,10 @@ class UsersList extends StatelessWidget {
       ),
       body: Container(
         child: ListView.builder(
-          itemCount: car?.length,
+          itemCount: car.length,
           itemBuilder: (context, index) {
             return ListTile(
-              title: Text('${car?[index].name}'),
+              title: Text('${car[index].name}'),
             );
           },
         ),

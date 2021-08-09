@@ -13,9 +13,9 @@ class Spinner extends StatelessWidget {
       body: Padding(
         padding: EdgeInsets.fromLTRB(36.0, 178.0, 36.0, 0),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Center(child: Image.asset('assets/mobileLogo.png')),
+            Image.asset('assets/mobileLogo.png'),
             SizedBox(
               height: 55.0,
             ),
